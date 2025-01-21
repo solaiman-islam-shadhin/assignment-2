@@ -100,14 +100,14 @@ body {
 .marquee p {
    position: absolute;
    right: 0;
-   left: -0.999999;
+   left: 0;
    width: auto;
    height: 100%;
    color: white;
    line-height: 50px;
    text-align: center;
    transform: translateX(100%);
-   animation: scroll-left 17s infinite linear;
+   animation: scroll-left 20s infinite linear;
 }
 
 @keyframes scroll-left {
@@ -318,8 +318,30 @@ body {
       justify-content: space-between;
       border: 0.5px solid rgb(254, 163, 1);
       padding: 12px 16px;
+      margin-bottom: 10px;
    }
-
+   .marquee p {
+      position: absolute;
+      left: inherit;
+      right: inherit;
+      width: auto;
+      height: 100%;
+      color: white;
+      line-height: 50px;
+      text-align: center;
+      transform: translateX(100%);
+      animation: scroll-left 15s linear infinite;
+   }
+   @keyframes scroll-left {
+      0% {
+         transform: translateX(100%);
+      }
+   
+      100% {
+         transform: translateX(-100%);
+      }
+   }
+   
    .hero-kids {
       flex-direction: column-reverse;
       padding: 20px 10px;
